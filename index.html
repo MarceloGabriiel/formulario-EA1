@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário / Sabor 2024 </title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(233, 238, 238);
+        }
+        .box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgb(252, 249, 249);
+            padding: 15px;
+            border-radius: 4%;
+        }
+        fieldset{
+            border: 3px solid dodgerblue;
+        }
+        legend{
+            border: 1px solid dodgerblue;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .inputBox{
+            position: relative;
+        }
+        .inputUser{
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 0px;
+        }
+        .labelInput{
+            position: absolute;
+            top: 2px;
+            left: 3px;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .inputUser:focus ~ .labelInput,
+        .inputUser:valid ~ .labelInput{
+            top: -20px;
+            font-size: 12px;
+            
+        }
+        #botao1 {
+             height: 35%;
+             width: 49%;
+             font-weight: bold;
+             background-color: red;
+             color: white;
+             border: none;
+             border-radius: 3px;
+             cursor: pointer;
+             padding: 10px;
+        }
+        #botao2 {
+             height: 35%;
+             width: 49%;
+             font-weight: bold;
+             background-color: green;
+             color: white;
+             border: none;
+             border-radius: 3px;
+             cursor: pointer;
+             padding: 10px;
+            }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>Formulário de Clientes</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required> 
+                    <label for="nome" class="labelInput">Nome completo:</label>   
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="email" id="email" class="inputUser" required>
+                    <label for="email" class="labelInput">Email:</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <label for="data_nascimento"><b>Data de Nascimento</b></label>
+                    <input type="date" name="data_nascimento" id="data_nascimento" class="inputUser" required>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="residêndia" id="residêndia" class="inputUser" required>
+                    <label for="residêndia" class="labelInput">Residência:</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="preferencia_alimento" id="preferencia_alimento" class="inputUser" required>
+                    <label for="preferencia_alimento" class="labelInput">Preferências de Alimentação:</label>
+                </div>
+                <br><br>
+                <div class="botao-container">
+
+                    <button id="botao1" onclick="limpar_campo()">Limpar</button>
+                    <button id="botao2" onclick="click()">Salvar</button>
+                    
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
